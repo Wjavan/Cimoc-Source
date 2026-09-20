@@ -1,56 +1,5 @@
 {
- "MH160CC": {
-  "baseUrl": "https://www.mh160mh.com",
-  "serverUrl": "",
-  "name": "漫画160CC",
-  "search": "",
-  "searchInfoList": "",
-  "searchInfoCid": "",
-  "searchInfoTitle": "",
-  "searchInfoCover": "",
-  "parseInfoTitle": "meta[name=og:novel:book_name]@content",
-  "parseInfoCover": "meta[property=og:image]@content",
-  "parseInfoIntro": "meta[name=og:description]@content",
-  "parseInfoAuthor": "meta[name=og:novel:author]@content",
-  "parseInfoUpdate": "meta[name=og:novel:update_time]@content",
-  "parseInfoStatus": "meta[property=og:novel:status]@content",
-  "parseChapterList1": "#doc-oc-demo1 a",
-  "parseChapterPath": "a@href",
-  "parseChapterTitle": "a@text",
-  "parseImageList": "$function getImgList(){var s=qTcms_S_m_murl_e;if(!s)return[];var A='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';var b='',d=[],L=0,n,c;for(n=0;n<s.length;n++){c=s.charAt(n);if(c=='_')c='-';if(c=='=')break;if(c=='-')c='-';b=b<<6|A.indexOf(c);L=L+6;if(L>=8){L=L-8;d.push((b>>L)&255);}};var utf8='',i,cc,out=[];for(i=0;i<d.length;i++){cc=d[i];if(cc<128){utf8=utf8+String.fromCharCode(cc);}else if(cc<2048){utf8=utf8+String.fromCharCode(192|(cc>>6));utf8=utf8+String.fromCharCode(128|(cc&63));}else{utf8=utf8+String.fromCharCode(224|(cc>>12));utf8=utf8+String.fromCharCode(128|((cc>>6)&63));utf8=utf8+String.fromCharCode(128|(cc&63));}};var parts=utf8.split('$qingtiandy$');for(i=0;i<parts.length;i++){var u=parts[i];if(u){while(u.charAt(0)=='/')u=u.substring(1);out.push('https://'+u);}}return out;}",
-  "parseImageUrl": "",
-  "parseCategoryPath": "",
-  "_why": "同 MH160，仅 baseUrl 不同（同一站点）。图片 CDN 已下线。"
- },
- "COPYMHSERVER": {
-  "baseUrl": "https://www.copy20.com/api/kb/web/searchbg/comics"
- },
- "HOTMANGASERVER": {
-  "baseUrl": "https://mapi.hotmangasg.com"
- },
- "IKANMANSERVER": {
-  "baseUrl": "https://i.hamreus.com"
- },
- "BASEURLHLV2": {
-  "baseUrl": "PyhLDL/o0X0uZzEBUQQsjNDF3D+J6d33YRxE1rMnpuw=",
-  "serverUrl": "PyhLDL/o0X0uZzEBUQQsjNDF3D+J6d33YRxE1rMnpuw="
- },
- "BASEURLJMV2": {
-  "updateUrl": "",
-  "baseUrl": "DbW/7c+yB4mmImuQQX9dq9YN0qrCjAm+aZtRw42hEuI="
- },
- "OHMANHUARATELIMIT": 800,
- "WNACG": {
-  "updateUrl": ""
- },
- "backup_update": {
-  "baseUrl": "https://www.cimoc.top/cimoc/sourc/master/raw/sourceBaseUrl.json"
- },
- "update_backup_my": {
-  "baseUrl": "https://raw.githubusercontent.com/haleydu-test/cimocUpdate/main/sourceBaseUrl.json"
- },
  "DOGEMANGA": {
-  "name": "漫畫狗(DogeManga)",
   "baseUrl": "https://dogemanga.com",
   "serverUrl": "https://dogemanga.com",
   "search": "/?q=%s",
@@ -58,26 +7,16 @@
   "searchInfoCid": "a.site-card__manga-title@href",
   "searchInfoTitle": "h5.card-title@text",
   "searchInfoCover": "img.card-img-top@src",
-  "searchInfoAuthor": "",
-  "searchInfoUpdate": "",
   "parseInfoTitle": "meta[property=og:title]@content",
   "parseInfoCover": "meta[property=og:image]@content",
   "parseInfoIntro": "meta[name=description]@content",
-  "parseInfoAuthor": "",
-  "parseInfoUpdate": "",
-  "parseInfoStatus": "",
-  "parseChapterList1": "select.site-selector@option@value",
-  "parseChapterPath": "",
-  "parseChapterTitle": "",
-  "parseImageList": "",
-  "parseImageUrl": "data-page-image-url",
-  "parseImageDomain": "",
-  "parseImageDomainPre": "",
-  "parseCategoryPath": "首页最新::/?q= / 分類列表::/?q=",
-  "_why": "搜索/详情/章节列表静态可解析。详情页无章节列表（仅单选 select 当前一话），阅读页 /p/{id} 含 data-page-image 但需 JS 解密，静态不可取图。"
+  "parseChapterList1": "select.site-selector option",
+  "parseCategoryPath": "首頁最新::/&&分類列表::/list/",
+  "parseImageList": "img@data-page-image-url",
+  "parseChapterPath": "@value",
+  "parseChapterTitle": "@text"
  },
  "IKANMAN": {
-  "name": "看漫画(简体)",
   "baseUrl": "https://www.manhuagui.com",
   "serverUrl": "https://www.manhuagui.com",
   "search": "/s/%s.html",
@@ -85,24 +24,15 @@
   "searchInfoCid": "div.book-cover > a.bcover@href",
   "searchInfoTitle": "div.book-detail > dl > dt > a@title",
   "searchInfoCover": "div.book-cover > a.bcover > img@src",
-  "searchInfoAuthor": "",
   "searchInfoUpdate": "span.tt@text",
   "parseInfoTitle": "div.book-title > h1@text",
-  "parseInfoCover": "",
   "parseInfoIntro": "div#intro-all@text",
-  "parseInfoAuthor": "",
-  "parseInfoUpdate": "",
-  "parseInfoStatus": "",
-  "parseChapterList1": "ul.chapter-list a@href||div.chapter-list a@href",
-  "parseChapterPath": "",
-  "parseChapterTitle": "",
-  "parseImageList": "",
-  "parseImageUrl": "",
+  "parseChapterList1": "ul.chapter-list a",
   "parseCategoryPath": "日本::/list/japan/&&完结::/list/wanjie/&&连载::/list/lianzai/&&排行::/rank/&&更新::/update/",
-  "_why": "搜索/详情/章节列表静态可解析（ul.chapter-list 完整）。阅读页图片由 window[eval](function(p,a,c,k,e,d){...}) 混淆生成，静态不可取图。"
+  "parseChapterPath": "@href",
+  "parseChapterTitle": "@text"
  },
  "IKANMANTW": {
-  "name": "看漫畫(繁體)",
   "baseUrl": "https://tw.manhuagui.com",
   "serverUrl": "https://tw.manhuagui.com",
   "search": "/s/%s.html",
@@ -110,24 +40,15 @@
   "searchInfoCid": "div.book-cover > a.bcover@href",
   "searchInfoTitle": "div.book-detail > dl > dt > a@title",
   "searchInfoCover": "div.book-cover > a.bcover > img@src",
-  "searchInfoAuthor": "",
   "searchInfoUpdate": "span.tt@text",
   "parseInfoTitle": "div.book-title > h1@text",
-  "parseInfoCover": "",
   "parseInfoIntro": "div#intro-all@text",
-  "parseInfoAuthor": "",
-  "parseInfoUpdate": "",
-  "parseInfoStatus": "",
-  "parseChapterList1": "ul.chapter-list a@href||div.chapter-list a@href",
-  "parseChapterPath": "",
-  "parseChapterTitle": "",
-  "parseImageList": "",
-  "parseImageUrl": "",
+  "parseChapterList1": "ul.chapter-list a",
   "parseCategoryPath": "日本::/list/japan/&&完結::/list/wanjie/&&連載::/list/lianzai/&&排行::/rank/&&更新::/update/",
-  "_why": "同 IKANMAN 繁体模板，阅读页图片同样混淆 JS 生成，静态不可取图。"
+  "parseChapterPath": "@href",
+  "parseChapterTitle": "@text"
  },
  "SHOUJIMH": {
-  "name": "手机漫画(手机用户最喜爱的在线漫画网)",
   "baseUrl": "https://www.gmanhua.com",
   "serverUrl": "https://www.gmanhua.com",
   "search": "/search?title=%s",
@@ -135,24 +56,16 @@
   "searchInfoCid": "a[href^=/manhua]@href",
   "searchInfoTitle": "a[href^=/manhua]@text",
   "searchInfoCover": "img@src",
-  "searchInfoAuthor": "",
-  "searchInfoUpdate": "",
   "parseInfoTitle": "h1@text",
   "parseInfoCover": "img@src",
   "parseInfoIntro": "meta[name=Description]@content",
   "parseInfoAuthor": "meta[name=Author]@content",
-  "parseInfoUpdate": "",
-  "parseInfoStatus": "",
-  "parseChapterList1": "ul.nr7 > li > a.tg@href",
-  "parseChapterPath": "",
-  "parseChapterTitle": "",
-  "parseImageList": "",
-  "parseImageUrl": "",
+  "parseChapterList1": "ul.nr7 > li > a.tg",
   "parseCategoryPath": "連載::/manhua-latest/&&更新::/manhua-updated/&&完結::/manhua-completed/",
-  "_why": "搜索/详情/章节列表静态可解析。阅读页图片由 $.ajax POST /chapterimagefun.ashx 拿 JSON，静态不可取图。"
+  "parseChapterPath": "@href",
+  "parseChapterTitle": "@text"
  },
  "MANMANMANHUA": {
-  "name": "漫漫漫画",
   "baseUrl": "https://www.manmanapp.com",
   "serverUrl": "https://www.manmanapp.com",
   "search": "/search/index.html?keyword=%s",
@@ -160,31 +73,12 @@
   "searchInfoCid": "a[href^=/comic-]@href",
   "searchInfoTitle": "h3.ellipsis@text",
   "searchInfoCover": "img@src",
-  "searchInfoAuthor": "",
-  "searchInfoUpdate": "",
   "parseInfoTitle": "h1@text",
   "parseInfoCover": "img@src",
-  "parseInfoIntro": "",
-  "parseInfoAuthor": "",
-  "parseInfoUpdate": "",
-  "parseInfoStatus": "",
-  "parseChapterList1": "",
-  "parseChapterPath": "",
-  "parseChapterTitle": "",
-  "parseImageList": "",
-  "parseImageUrl": "",
-  "parseCategoryPath": "每日更新::/comic/update.html&&作品分类::/comic/category.html",
-  "_why": "搜索/详情静态可解析。章节列表需 $.post AJAX，阅读页需 JS，静态不可取图。"
+  "parseCategoryPath": "每日更新::/comic/update.html&&作品分类::/comic/category.html"
  },
  "MH160": {
   "baseUrl": "https://www.mh160mh.com",
-  "serverUrl": "",
-  "name": "漫画160",
-  "search": "",
-  "searchInfoList": "",
-  "searchInfoCid": "",
-  "searchInfoTitle": "",
-  "searchInfoCover": "",
   "parseInfoTitle": "meta[name=og:novel:book_name]@content",
   "parseInfoCover": "meta[property=og:image]@content",
   "parseInfoIntro": "meta[name=og:description]@content",
@@ -194,9 +88,6 @@
   "parseChapterList1": "#doc-oc-demo1 a",
   "parseChapterPath": "a@href",
   "parseChapterTitle": "a@text",
-  "parseImageList": "$function getImgList(){var s=qTcms_S_m_murl_e;if(!s)return[];var A='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';var b='',d=[],L=0,n,c;for(n=0;n<s.length;n++){c=s.charAt(n);if(c=='_')c='-';if(c=='=')break;if(c=='-')c='-';b=b<<6|A.indexOf(c);L=L+6;if(L>=8){L=L-8;d.push((b>>L)&255);}};var utf8='',i,cc,out=[];for(i=0;i<d.length;i++){cc=d[i];if(cc<128){utf8=utf8+String.fromCharCode(cc);}else if(cc<2048){utf8=utf8+String.fromCharCode(192|(cc>>6));utf8=utf8+String.fromCharCode(128|(cc&63));}else{utf8=utf8+String.fromCharCode(224|(cc>>12));utf8=utf8+String.fromCharCode(128|((cc>>6)&63));utf8=utf8+String.fromCharCode(128|(cc&63));}};var parts=utf8.split('$qingtiandy$');for(i=0;i<parts.length;i++){var u=parts[i];if(u){while(u.charAt(0)=='/')u=u.substring(1);out.push('https://'+u);}}return out;}",
-  "parseImageUrl": "",
-  "parseCategoryPath": "",
-  "_why": "详情页 og:novel:* meta 与 #doc-oc-demo1 章节列表静态完整。阅读页为青桃 CMS base64 解码，但实测 qTcms_S_m_mhttpurl 为空、mh160tuku 域名不存在、serverUrl CDN 全 403 —— 图片 CDN 已下线，仅供目录浏览。"
+  "parseImageList": "$function getImgList(){var s=qTcms_S_m_murl_e;if(!s)return[];var A='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';var b=0,d=[],L=0,n,c;for(n=0;n<s.length;n++){c=s.charAt(n);if(c=='=')break;if(c=='_')c='/';else if(c=='-')c='+';var idx=A.indexOf(c);if(idx<0)continue;b=(b<<6)|idx;L+=6;if(L>=8){L-=8;d.push((b>>L)&255);}}var utf8='',out=[];for(var i=0;i<d.length;i++){var cc=d[i];if(cc<128)utf8+=String.fromCharCode(cc);else if(cc<2048){utf8+=String.fromCharCode(192|(cc>>6));utf8+=String.fromCharCode(128|(cc&63));}else{utf8+=String.fromCharCode(224|(cc>>12));utf8+=String.fromCharCode(128|((cc>>6)&63));utf8+=String.fromCharCode(128|(cc&63));}}var parts=utf8.split('$qingtiandy$');for(var i=0;i<parts.length;i++){var u=parts[i];if(u){while(u.charAt(0)=='/')u=u.substring(1);out.push('https://'+u);}}return out;}"
  }
 }
