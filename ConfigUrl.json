@@ -1,286 +1,54 @@
-{
-	"QIXIMH":{
-      "baseUrl":"http://qiximh1.com",
-      "search":"/search.php",
-      "searchKey":"keyword",
-
-      "searchInfoList":"search_data",
-      "searchInfoCid":"id",
-      "searchInfoTitle":"name",
-      "searchInfoCover":"imgs",
-      "searchInfoAuthor":"author",
-      "searchInfoUpdate":"",
-
-      "parseInfoTitle":"h1.name",
-      "parseInfoCover":"div.comic_info.h_comic_info > div.comic_cover",
-      "parseInfoIntro":"div.comic_bottom_content > div.detail_wrap > div.details",
-      "parseInfoAuthor":".author_name",
-      "parseInfoUpdate":"span.looking_chapter",
-      "parseInfoStatus":"span.looking_chapter",
-
-      "parseChapterList1":"ul.catalog_list.row_catalog_list > a",
-
-      "parseCategoryInfoList":"div.category_comic_container > div.comic_cover_container",
-      "parseCategoryInfoCid":"a",
-      "parseCategoryInfoTitle":"div.comic_cover_title",      
-      "parseCategoryInfoCover":"div.comic_cover",
-      "parseCategoryInfoUpdate":"div.comic_cover_desc"
-    },
-    
-    "ANIMX2":"http://www.2animx.com",
-    
-	"BAINIAN":"https://m.bnmanhua.com",
-    
-	"BUKA":"http://m.buka.cn",
-    
-	"CARTOONMAD":"https://www.cartoonmad.com",
-    
-	"CCMH":"http://m.ccmh16.com",
-    
-	"CCTUKU":"http://m.tuku.cc",
-
-	"CHUIXUE":"http://www.chuixue.net",
-    "CHUIXUESERVER":"http://chuixue1.tianshigege.com/",
-
-	"CHUIYAO":"http://m.chuiyao.com",
-
-	"COPYMH":"https://copymanga.com",
-    
-    "COPYMHSERVER":"https://api.copymanga.com",
-
-	"DM5":"http://m.dm5.com",
-    
-	"DMZJ":"http://m.dmzj1.com",
-    "DMZJSEARCH":"http://s.acg.dmzj1.com",
-	"DMZJPICTURE":"http://images.dmzj1.com/",
-	"DMZJSERVER":"http://v3api.dmzj1.com",
-
-	"DMZJFIX":"https://m.dmzj.com",
-    "DMZJFIXPICTURE":"https://images.dmzj.com/",
-    "DMZJFIXSERVER":"http://api.dmzj.com",
-
-	"DMZJV2":"https://m.dmzj.com",
-    "DMZJV2PICTURE":"https://images.dmzj.com/",
-    "DMZJV2SERVER":"http://v2.api.dmzj.com",
-	
-	"EHENTAI":"https://e-hentai.org",
-    "EHENTAISERVER1":"http://ehgt.org/",
-    "EHENTAISERVER2":"http://g.e-hentai.org",
-    "EHENTAIINFOCOVER":"https://github.com/Haleydu/Cimoc/raw/release-tci/screenshot/icon.png",
-
-	"GUFENG":"https://m.gufengmh8.com",
-	"GUFENGSERVER":"https://res.xiaoqinre.com/",
-
-	"HHXXEE":"",
-	
-	"HOTMANGA":"https://m.manga2020.com",
-	"HOTMANGASERVER":"https://mapi.hotmangasg.com",
-
-	"IKANMAN":"https://www.manhuagui.com",
-	"IKANMANTW":"https://tw.manhuagui.com",
-	"IKANMANSERVER":"https://i.hamreus.com",
-
-	"JMTT":"https://18comic.art/",
-	
-	"MANGABZ":"http://www.mangabz.com",
-	
-	"MANGAKAKALOT":"https://mangakakalot.com",
-	
-	"MANGANEL":"https://manganelo.com",
-	
-
-
-
-
-    
-	"MANHUADB":"https://www.manhuadb.com",
-
-    "MANHUATAI":"https://m.manhuatai.com/",
-	"MANHUATAIPIC":"https://www.kanman.com",
-	
-	"MH50":{
-      "baseUrl":"https://www.manhuacat.com",
-      "search":"/search.html?q=%s",
-
-      "searchInfoList":".comic-main-section > .row > div",
-      "searchInfoCid":"h2 > a",
-      "searchInfoTitle":"h2",
-      "searchInfoCover":"img.img-fluid",
-      "searchInfoAuthor":".one-line.comic-author",
-      "searchInfoUpdate":"",
-
-      "parseInfoTitle":"div.comic-info > h1.comic-title",
-      "parseInfoCover":"img.img-round",
-      "parseInfoIntro":"div.comic-info > p.comic_story",
-      "parseInfoAuthor":"td.pub-duration",
-      "parseInfoUpdate":"div > table > tbody > tr:eq(10) > td",
-      "parseInfoStatus":"div.comic-info > ul.tags",
-
-      "parseChapterList1":"ol.links-of-books > li > a",
-      "parseChapterList2":"",
-      "parseChapterPath":"",
-      "parseChapterTitle":"",
-
-      "parseImageSrc":"img_data = \"(.*?)\"",
-      "parseImageDomain":"data-chapter-domain=\"(.*?)\"",
-      "parseImageDomainPre":"/uploads/",      
-      "parseCategoryInfoList":".comic-main-section > div",
-      "parseCategoryInfoCid":"a",
-      "parseCategoryInfoTitle":"img",      
-      "parseCategoryInfoCover":"img",
-      "parseCategoryInfoAuthor":"div.comic-creators",
-
-      "parseCategoryPath":"/list/a-%s-c-%s-t-%s-y-%s-i-%s-m-%s.html"
-    },
-	
-	"MH57":"http://m.wuqimh.com/",
-	"MH57SERVER":"http://images.lancaier.com",
-
-	"MH160":"https://www.mh160.xyz",
-	"MH160SERVER1":"https://mhpic5.kingwar.cn",
-	"MH160SERVER2":"https://mhpic6.kingwar.cn",
-	"MH160SERVER3":"https://mhpic5.kingwar.cn",
-
-	"MH517":"http://m.517manhua.com",
-	
-	"MHLOVE":"",
-	
-	"MIGU":"http://www.migudm.cn",
-	
-	"OHMANHUA":"https://www.cocomanhua.com",
-    "OHMANHUARATELIMIT":2000,
-	
-	"PUFEI":"http://m.pufei.org/",
-	"PUFEISERVER":"http://res.img.scbrxhwl.com/",
-	
-	"QIMANWU":"http://qiman6.com",
-	
-	"QIMIAOMH":"https://www.qimiaomh.com",
-	
-	"SIXMH":"http://sixmh7.com",
-	
-	"TENCENT":"http://ac.qq.com",
-	"TENCENTM":"https://m.ac.qq.com",
-
-	"TUHAO":"https://tuhao456.com",
-	
-	"U17":"http://www.u17.com",
-	"U17_SO":"http://so.u17.com",
-	
-	"WEBTOON":"https://m.webtoons.com",
-
-	"WEBTOONDONGMANMANHUA":"https://www.dongmanmanhua.cn",
-	
-	"YKMH":"http://wap.ykmh.com/",
-	"YKMH_SERVER":"https://pic.w1fl.com",
-	
-	"YYLS":"http://8comic.se",
-	
-	"KUAIKANMANHUA":"https://www.kuaikanmanhua.com",
-    "KUAIKANMANHUASERVER":"https://api.kkmh.com",
-
-	"HHAAZZ":"http://www.hhimm.com",
-	"HHAAZZ_SW":"44123.com|hhcool.com|hhimm.com",
-
-    "JOYHENTAI":"https://zh.joyhentai.fun/",
-
-    "BAOZIMH":{
-      "baseUrl":"https://cn.baozimh.com",
-      "search":"/search?q=%s",
-
-      "searchInfoList":"div.pure-g.classify-items > div",
-      "searchInfoCid":"a:eq(0)",
-      "searchInfoTitle":"a:eq(0)",
-      "searchInfoCover":"a:eq(0) > amp-img:eq(0)",
-      "searchInfoAuthor":"small",
-      "searchInfoUpdate":"",
-
-      "parseInfoTitle":"h1.comics-detail__title",
-      "parseInfoCover":"div.l-content > div > div > amp-img",
-      "parseInfoIntro":"div.comics-detail__info > p",
-      "parseInfoAuthor":"h2.comics-detail__author",
-      "parseInfoUpdate":"div.comics-detail__info > div.supporting-text.mt-2 > div:eq(1) > span > em",
-      "parseInfoStatus":"div.tag-list > span:eq(0)",
-
-      "parseChapterList1":"div#chapter-items > div",
-      "parseChapterList2":"div#chapters_other_list > div",
-      "parseChapterPath":"a",
-      "parseChapterTitle":"span",
-      "parseCategoryPath":"/classify?type=%s&region=%s&state=%s&filter=%s"
-    },
-    
-
-    "YIMMH":{
-      "baseUrl":"https://m.yimmh.com",
-      "search":"/search?keyword=%s",
-
-      "searchInfoList":"ul.book-list > li",
-      "searchInfoCid":"div.book-list-cover > a",
-      "searchInfoTitle":"p.book-list-info-title",
-      "searchInfoCover":"img",
-      "searchInfoAuthor":"span.book-list-info-bottom-item",
-      "searchInfoUpdate":"span.book-list-info-bottom-right-font",
-
-      "parseInfoTitle":"p.detail-main-info-title",
-      "parseInfoCover":"img.detail-main-bg",
-      "parseInfoIntro":"p.detail-desc",
-      "parseInfoAuthor":"div.detail-main-info > p:eq(2) > a",
-      "parseInfoUpdate":"span.detail-list-title-3",
-      "parseInfoStatus":"span.detail-list-title-1",
-
-      "parseChapterList1":"ul#detail-list-select > li > a",
-      "parseChapterPath":"",
-      "parseChapterTitle":"",
-
-      "parseImageList":"img.lazy",
-      "parseImageUrl":"img",
-
-      "parseCategoryInfoList":"books",
-      "parseCategoryInfoCid":"unique_id",
-      "parseCategoryInfoCidPre":"/book/",
-      "parseCategoryInfoTitle":"book_name",      
-      "parseCategoryInfoCover":"cover_url",
-      "parseCategoryInfoAuthor":"author_name",
-      "parseCategoryInfoUpdate":"update_time",
-
-      "parseCategoryPath":"/getBooks?tag=%s&end=%s&page=%s"
-    },
-
-    "DUMH":{
-      "baseUrl":"https://m.dumanhhua.com",
-      "search":"/search/?keywords=%s",
-
-      "searchInfoList":"div#update_list > div.UpdateList > div",
-      "searchInfoCid":"div.itemImg > a",
-      "searchInfoTitle":"div.itemTxt > a.title",
-      "searchInfoCover":"mip-img",
-      "searchInfoAuthor":"div.itemTxt > p",
-      "searchInfoUpdate":"span.date",
-
-      "parseInfoTitle":"div#Cover > mip-img",
-      "parseInfoCover":"div#Cover > mip-img",
-      "parseInfoIntro":"p.txtDesc",
-      "parseInfoAuthor":"div.view-sub > div.pic > div:eq(2) > dd",
-      "parseInfoUpdate":"div.view-sub > div.pic > div:eq(4) > dd",
-      "parseInfoStatus":"div.view-sub > div.pic > div:eq(1)",
-
-      "parseChapterList1":"div.list > ul > li > a",
-      "parseChapterPath":"",
-      "parseChapterTitle":"",
-
-      "parseImageList":"",
-      "parseImageUrl":"div > mip-link > mip-img",
-      "parseImageFaultImage":"https://2mg.dumanhhua.com/images/default/cover.png",
-
-
-      "parseCategoryInfoList":"div#w0 > ul > li",
-      "parseCategoryInfoCid":"a.ImgA",
-      "parseCategoryInfoTitle":"mip-img",      
-      "parseCategoryInfoCover":"mip-img",
-      "parseCategoryInfoAuthor":"",
-      "parseCategoryInfoUpdate":"",
-
-      "parseCategoryPath":"/list/"
-    }
-
-}
+[
+  {
+    "comicSourceName": "漫画狗",
+    "comicSourceUrl": "https://dogemanga.com",
+    "enable": true,
+    "ruleSearchUrl": "/?q=%s",
+    "ruleSearchList": "@css:div.site-card",
+    "ruleSearchTitle": "@css:h5@text",
+    "ruleSearchCoverUrl": "@css:img@src",
+    "ruleSearchCid": "@css:a.site-card__manga-title@href",
+    "ruleSearchAuthor": "",
+    "ruleSearchUpdate": "",
+    "ruleComicInfoUrl": "/m/%s",
+    "ruleComicTitle": "@css:meta[property=og:title]@content",
+    "ruleComicCoverUrl": "@css:meta[property=og:image]@content",
+    "ruleComicAuthor": "",
+    "ruleComicIntro": "@css:meta[name=description]@content",
+    "ruleComicUpdate": "",
+    "ruleComicStatus": "",
+    "ruleChapterList": "@css:select.site-selector option",
+    "ruleChapterName": "@css:option@text",
+    "ruleChapterUrl": "@css:option@value",
+    "ruleContentUrl": "@js:result",
+    "ruleComicContent": "$function parseImages() {var imgs=[];var divs=document.querySelectorAll('[data-page-image-url]');for(var i=0;i<divs.length;i++){var u=divs[i].getAttribute('data-page-image-url');if(u){while(u.charAt(0)=='/')u=u.substring(1);imgs.push('https://'+u);}}return imgs;}",
+    "type": 79,
+    "sort": 99
+  },
+  {
+    "comicSourceName": "动漫屋",
+    "comicSourceUrl": "http://m.dm5.com",
+    "enable": true,
+    "ruleSearchUrl": "/dm5/search?keyword=%s",
+    "ruleSearchList": "@css:ul.search-class li",
+    "ruleSearchTitle": "@css:a@text",
+    "ruleSearchCoverUrl": "@css:img@src",
+    "ruleSearchCid": "@css:a@href",
+    "ruleSearchAuthor": "",
+    "ruleSearchUpdate": "",
+    "ruleComicInfoUrl": "/manhua-%s/",
+    "ruleComicTitle": "@css:meta[property=og:title]@content",
+    "ruleComicCoverUrl": "@css:meta[property=og:image]@content",
+    "ruleComicAuthor": "",
+    "ruleComicIntro": "@css:meta[name=description]@content",
+    "ruleComicUpdate": "",
+    "ruleComicStatus": "",
+    "ruleChapterList": "@css:a[href*='/m']",
+    "ruleChapterName": "@css:a@text",
+    "ruleChapterUrl": "@css:a@href",
+    "ruleContentUrl": "@js:result",
+    "ruleComicContent": "$function parseImages(){var s=DM5_CID;var m=DM5_MID;if(!s||!m)return[];var url='http://m.dm5.com/chapterfun.ashx?cid='+s+'&mid='+m;var xhr=new XMLHttpRequest();xhr.open('GET',url,false);xhr.send();if(xhr.status==200){var data=JSON.parse(xhr.responseText);var imgs=[];for(var i=0;i<data.length;i++)imgs.push(data[i].url);return imgs;}return [];}",
+    "type": 79,
+    "sort": 99
+  }
+]
